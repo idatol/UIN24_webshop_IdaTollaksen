@@ -20,6 +20,10 @@ body {
     font-family: "Rubik", serif;
     font-size: 20px;
 }
+header, article, div, aside, section, footer, main {
+    box-sizing: border-box;
+}
+
 #content {
     width: 100%;
     max-width: 1200px;
@@ -46,14 +50,20 @@ header {
         position: relative;
 
         #cartcount {
+            display: block;
             font-family: "Rubik", serif;
             font-size: 0.7rem;
             background-color: var(--red);
             color: var(--white);
             text-align: center;
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
+            padding-top: 4px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 9px;
+            left: -7px;
         }
 
         img {
@@ -65,5 +75,79 @@ header {
     nav {
         width: 100%;
         background-color: var(--red);
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                color: var(--white);
+                padding: calc(0.5rem + 4px) 1rem;
+                display: inline-block;
+                border-bottom: 4px solid var(--red);
+
+            }
+            a:hover{
+                background-color: var(--yellow);
+                color: var(--black);
+                border-bottom: 4px solid var(--black);
+            }
+        }
+    }
+}
+
+main{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    h2{
+        width: 100%;
+        display: block;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    article{
+        width: calc(33% - 1rem);
+        background-color: var(--black);
+        padding: 1rem;
+        color: var(--white);
+        border-bottom: 1rem solid var(--green) ;
+
+        img{
+            max-width: 100%;
+        }
+
+        a{
+            color: var(--yellow);
+            text-decoration: none;
+        }
+        
+        h3{
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        p{
+            margin: 0;
+        }
+
+        button{
+            font-family: "Rubik", serif;
+            font-size: 1rem;
+            background-color: var(--green);
+            color: var(--white);
+            border: none;
+            padding: 0.5rem 1rem;
+        }
+
+
     }
 }
