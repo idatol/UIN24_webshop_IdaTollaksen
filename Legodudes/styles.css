@@ -107,6 +107,15 @@ main{
     padding-left: 1rem;
     padding-right: 1rem;
 
+    #productlist{
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     h2{
         width: 100%;
         display: block;
